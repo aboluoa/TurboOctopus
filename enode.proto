@@ -1,0 +1,35 @@
+syntax = "proto3";
+option go_package = "/proto";
+
+
+message StartStreamReq {
+  string name = 1;
+}
+message StartStreamRes {
+  int32 streamType = 1;   // 1:Block 2:Tx
+  int64 startTiem =2;
+  bytes msg = 3;  //block或者tx二进制信息
+}
+
+message SendTxReq {
+  string name = 1;
+  repeated bytes txHex = 2;  //tx二进制信息
+}
+
+message SendTxToCoinBaseReq {
+  string name = 1;
+  string coinBaseName = 2;
+  int32 top = 3;
+  repeated bytes txHex = 4;  //tx二进制信息
+}
+
+message SendTxRes {
+  int32 status = 1;
+}
+
+
+service EnodeManagerInterface {
+  rpc handStartStream (StartStreamReq) returns (stream StartStreamRes) {}
+  rpc handSendTx (SendTxReq) returns (SendTxRes) {}
+  rpc handSendTxToCoinBase (SendTxToCoinBaseReq) returns (SendTxRes) {}
+}

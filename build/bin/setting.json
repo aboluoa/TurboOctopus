@@ -1,0 +1,14 @@
+{
+    "BootIP":"192.168.1.10",
+    "BootPort":30311,
+    "CrawlCount":10,
+    "PendingEnodeCount":200000,
+    "MaxCount":2000,
+    "MaxDailCount":30,
+    "PrivateKey":"f7667c162bb3c7b9ebf850b9af318e496cf81d445d5c3c8582a7833e7ec42ef9",
+    "NetworkID":56,
+    "GenesisHash":"0x0d21840abff46b96c84b2ac9e10e4f5cdaeb5693cb665db62a2f3b02d2d57b5b",
+    "HeadNumber":25160955,
+    "HeadHash":"0xdb7ba05e3b1d361d6edcff01f6ebea94e5d3b9a957d5b0d9606196951e42eae8",
+    "Td":50009242
+}
